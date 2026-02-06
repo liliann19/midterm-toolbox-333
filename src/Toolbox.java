@@ -123,6 +123,16 @@ public class Toolbox {
     if (head == null || n < 0) {
       throw new IllegalArgumentException("Head cannot be null and n cannot be negative.");
     }
+
+    SingleNode current = head;
+    int index = 0;
+    while (current != null) {
+      if (index == n){
+        return current;
+      }
+      current = current.next;
+      index++;
+    }
     return null; 
   }
 
